@@ -1,0 +1,78 @@
+<form [formGroup]="form" (ngSubmit)="createCow()">
+  <table class="table">
+    <tr>
+      <th class="row">Formatting</th>
+      <th class="row">cowId</th>
+      <th class="row">healthIndex</th>
+      <th class="row">type</th>
+      <th class="row">animalId</th>
+      <th class="row">eventId</th>
+      <th class="row">lactationNumber</th>
+      <th class="row">daysInLactation</th>
+      <th class="row">ageInDays</th>
+      <th class="row">alertType</th>
+      <th class="row">duration</th>
+      <th class="row">daysInPregnancy</th>
+      <th class="row">heatIndexPeak</th>
+      <th class="row">newGroupId</th>
+      <th class="row">newGroupName</th>
+      <th class="row">currentGroupId</th>
+      <th class="row">currentGroupName</th>
+      <th class="row">destinationGroup</th>
+      <th class="row">destinationGroupName</th>
+      <th class="row">breedingNumber</th>
+      <th class="row">interval</th>
+    </tr>
+    <tr *ngFor="let row of tabData">
+      <td class="row">
+        <div class="control-panel">
+          <button type="button" (click)="updateCow(row)">Apply</button>
+          <button type="button" (click)="deleteCow(row.cowId)">Delete</button>
+        </div>
+      </td>
+      <td class="row">{{row.cowId}}</td>
+      <td class="row"><input *ngIf="row.healthIndex" [(ngModel)]="row.healthIndex" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.type" [(ngModel)]="row.type" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.animalId" [(ngModel)]="row.animalId" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.eventId" [(ngModel)]="row.eventId" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.lactationNumber" [(ngModel)]="row.lactationNumber" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.daysInLactation" [(ngModel)]="row.daysInLactation" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.ageInDays" [(ngModel)]="row.ageInDays" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.alertType" [(ngModel)]="row.alertType" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.duration" [(ngModel)]="row.duration" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.daysInPregnancy" [(ngModel)]="row.daysInPregnancy" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.heatIndexPeak" [(ngModel)]="row.heatIndexPeak" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.newGroupId" [(ngModel)]="row.newGroupId" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.newGroupName" [(ngModel)]="row.newGroupName" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.currentGroupId" [(ngModel)]="row.currentGroupId" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.currentGroupName" [(ngModel)]="row.currentGroupName" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.destinationGroup" [(ngModel)]="row.destinationGroup" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.destinationGroupName" [(ngModel)]="row.destinationGroupName" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.breedingNumber" [(ngModel)]="row.breedingNumber" [ngModelOptions]="{standalone: true}"></td>
+      <td class="row"><input *ngIf="row.interval" [(ngModel)]="row.interval" [ngModelOptions]="{standalone: true}"></td>
+    </tr>
+    <tr>
+      <td><button type="submit">Add</button></td>
+      <td><input [placeholder]="nextCowId" readonly></td>
+      <td><input placeholder="healthIndex" formControlName="healthIndex"></td>
+      <td><input placeholder="type" formControlName="type"></td>
+      <td><input placeholder="animalId" formControlName="animalId"></td>
+      <td><input placeholder="eventId" formControlName="eventId"></td>
+      <td><input placeholder="lactationNumber" formControlName="lactationNumber"></td>
+      <td><input placeholder="daysInLactation" formControlName="daysInLactation"></td>
+      <td><input placeholder="ageInDays" formControlName="ageInDays"></td>
+      <td><input placeholder="alertType" formControlName="alertType"></td>
+      <td><input placeholder="duration" formControlName="duration"></td>
+      <td><input placeholder="daysInPregnancy" formControlName="daysInPregnancy"></td>
+      <td><input placeholder="heatIndexPeak" formControlName="heatIndexPeak"></td>
+      <td><input placeholder="newGroupId" formControlName="newGroupId"></td>
+      <td><input placeholder="newGroupName" formControlName="newGroupName"></td>
+      <td><input placeholder="currentGroupId" formControlName="currentGroupId"></td>
+      <td><input placeholder="currentGroupName" formControlName="currentGroupName"></td>
+      <td><input placeholder="destinationGroup" formControlName="destinationGroup"></td>
+      <td><input placeholder="destinationGroupName" formControlName="destinationGroupName"></td>
+      <td><input placeholder="breedingNumber" formControlName="breedingNumber"></td>
+      <td><input placeholder="interval" formControlName="interval"></td>
+    </tr>
+  </table>
+</form>

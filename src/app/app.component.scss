@@ -1,0 +1,14 @@
+:host ::ng-deep {
+  .control-panel {
+    display: flex;
+  }
+
+  .table {
+    border-collapse: collapse;
+  }
+
+  .row {
+    border-bottom: 1px solid black;
+  }
+}
+

@@ -1,0 +1,35 @@
+export interface Cow {
+  healthIndex?: number;
+  endDate?: number | null;
+  minValueDateTime?: number;
+  type: string;
+  cowId: number;
+  animalId: string;
+  eventId: number;
+  deletable?: unknown;
+  lactationNumber: number;
+  daysInLactation: number;
+  ageInDays: number;
+  startDateTime: number;
+  reportingDateTime: number;
+  alertType?: string;
+  duration?: number;
+  originalStartDateTime?: unknown;
+  endDateTime?: number | null;
+  daysInPregnancy?: number | null;
+  heatIndexPeak?: string;
+  newGroupId?: number;
+  newGroupName?: string;
+  currentGroupId?: number;
+  currentGroupName?: string | null;
+  destinationGroup?: number;
+  destinationGroupName?: string;
+  calvingEase?: unknown;
+  oldLactationNumber?: number;
+  newborns?: unknown;
+  birthDateCalculated?: boolean;
+  sire?: any;
+  breedingNumber?: number;
+  isOutOfBreedingWindow?: boolean;
+  interval?: number;
+}
